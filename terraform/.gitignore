@@ -1,0 +1,15 @@
+# Terraform state and local cache
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+
+# Generated Lambda zip files (rebuilt on every plan/apply)
+zips/
+
+# Saved plan files (terraform plan -out=...)
+tfplan
+*.tfplan
+
+# Contains the Upstash Redis credentials - never commit this
+terraform.tfvars
