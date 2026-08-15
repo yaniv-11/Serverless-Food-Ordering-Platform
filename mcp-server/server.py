@@ -5,6 +5,8 @@ from decimal import Decimal
 import boto3
 from boto3.dynamodb.conditions import Key
 from mcp.server.mcpserver import MCPServer
+from starlette.requests import Request
+from starlette.responses import PlainTextResponse
 
 ORDERS_TABLE = os.environ["ORDERS_TABLE"]
 RESTAURANTS_TABLE = os.environ["RESTAURANTS_TABLE"]
@@ -17,6 +19,11 @@ restaurants_table = dynamodb.Table(RESTAURANTS_TABLE)
 menu_items_table = dynamodb.Table(MENU_ITEMS_TABLE)
 
 mcp = MCPServer("foodie-mcp-server")
+
+
+@mcp.custom_route("/health", methods=["GET"])
+async def health_check(request: Request) -> PlainTextResponse:
+    return PlainTextResponse("OK")
 
 
 @mcp.tool()
