@@ -9,7 +9,7 @@ from mcp.server.mcpserver import MCPServer
 ORDERS_TABLE = os.environ["ORDERS_TABLE"]
 RESTAURANTS_TABLE = os.environ["RESTAURANTS_TABLE"]
 MENU_ITEMS_TABLE = os.environ["MENU_ITEMS_TABLE"]
-AWS_REGION = os.environ.get("AWS_REGION", "ap-southeast-2")
+AWS_REGION = ap-southeast-2
 
 dynamodb = boto3.resource("dynamodb", region_name=AWS_REGION)
 orders_table = dynamodb.Table(ORDERS_TABLE)
