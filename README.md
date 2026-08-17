@@ -1,4 +1,4 @@
-# Foodie — Serverless Food Ordering Platform
+[# Foodie — Serverless Food Ordering Platform
 
 A full-stack food ordering application built on AWS serverless primitives. Users browse restaurants, manage a cart, authenticate with JWT, pay via Stripe, and track orders — all backed by Lambda, DynamoDB, and event-driven workflows.
 
@@ -284,3 +284,4 @@ Open the **CloudFront URL** from Terraform outputs.
 | Messaging | Amazon SQS, Amazon EventBridge |
 | Hosting | Amazon S3, Amazon CloudFront |
 | IaC | Terraform (AWS provider ~> 5.0) |
+](https://github.com/yaniv-11/Serverless-Food-Ordering-Platform/blob/main/README.md)
